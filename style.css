@@ -21,3 +21,35 @@
 .tip__link{display:inline-block;padding:.4rem .6rem;background:#2563EB;color:#fff;border-radius:6px;
   text-decoration:none;font-size:.8rem}
 
+
+
+/* === Chart (barre KPI) === */
+.chart-wrapper {
+  position: relative;
+  height: 80px;
+  margin-top: 10px; /* in DAX lo sostituisci con OffPx dinamico */
+}
+.chart-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 100%;
+}
+.bar {
+  width: 20%;
+  border-radius: 5px;
+}
+.bar--pl {
+  background-color: #CBD5E1; /* grigio */
+}
+.bar--ac {
+  background-color: #1E40AF; /* blu */
+}
+.connector-bar {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  width: 10px;
+  border-radius: 5px;
+}
+
