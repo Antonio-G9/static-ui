@@ -53,3 +53,49 @@
   border-radius: 5px;
 }
 
+
+/* === Grid 6 cards (responsive) === */
+.cards-grid {
+  display: grid;
+  gap: 20px;
+}
+.cards-grid.six {
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+}
+@media (max-width: 980px) {
+  .cards-grid.six {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .cards-grid.six {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Variante compatta per il titolo/sottotitolo */
+.card__meta {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: .5rem;
+}
+.card__subtitle {
+  font-size: .85rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* Colori “semaforo” opzionali (se vuoi usarli via classi) */
+.badge-ok    { color: #10B981; }  /* verde */
+.badge-warn  { color: #F59E0B; }  /* giallo */
+.badge-crit  { color: #EF4444; }  /* rosso  */
+
+/* Allineamento valore grande */
+.card__value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin: .2rem 0 .4rem;
+}
+
